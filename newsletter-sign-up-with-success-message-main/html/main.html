@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="signup-container" id="signup">
+        <div class="signup-form flex-column">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <div class="list-container flex-column">
+            <div class="list-item">
+              <img src="../assets/images/icon-list.svg" alt="" srcset="" />
+              <p>Product discovery and building what matters</p>
+            </div>
+
+            <div class="list-item">
+              <img src="../assets/images/icon-list.svg" alt="" srcset="" />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+
+            <div class="list-item">
+              <img src="../assets/images/icon-list.svg" alt="" srcset="" />
+              <p>And much more!</p>
+            </div>
+          </div>
+          <div class="flex-column email-container ">
+            <div class="email-label-row">
+              <label class="font-weight-600">Email address</label>
+              <span id="errorMsg" class="error-msg font-weight-600">Valid email required</span>
+            </div>
+      <form id="signupForm" novalidate>
+          <input
+              id="emailInput"
+              class="email-input max-width"
+              type="email"
+              placeholder="email@company.com"
+            />
+          </div>
+          <button
+            id="submitBtn"
+            class="button font-weight-600"
+            type="submit"
+          >
+            Subscribe to monthly newsletter
+          </button>
+</form>
+        
+        </div>
+
+        <img
+          class="signup-image"
+          src="../assets/images/illustration-sign-up-desktop.svg"
+        />
+      </div>
+
+      <div id="success" class="container-success ">
+          <div>
+
+        <div class="flex-column success-content">
+           <img class="success-img" src="../assets/images/icon-success.svg">
+           <h1 class="title-success">Thanks for subscribing!</h1>
+           <p class="confirmation-success">
+            A confirmation email has been sent to <span id="successEmail"></span>. Please
+            open it and click the button inside to confirm your subscription.
+           </p>
+           <button id="dismissBtn" class="button font-weight-600 max-width">Dismiss message</button>
+      </div>
+          </div>
+
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
