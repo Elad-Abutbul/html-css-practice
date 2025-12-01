@@ -1,35 +1,19 @@
 const emailInput = document.getElementById("emailInput");
-const errorMsg = document.getElementById("errorMsg");
+const errorMsg = document.querySelector(".error-msg");
 const signup = document.getElementById("signup");
-const success = document.getElementById("success");
+const success = document.querySelector(".container-success");
 const successEmail = document.getElementById("successEmail");
 const dismissBtn = document.getElementById("dismissBtn");
 const signupForm = document.getElementById("signupForm");
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-
-// handlerim |
-//           v
-
-signupForm.addEventListener("submit",onSubmit);
+signupForm.addEventListener("submit", onSubmit);
 
 dismissBtn.addEventListener("click", onDismiss);
 
-emailInput.addEventListener("input", clearErrorState);
-
-// handlerim ^
-//           |
-
-
-
-
-// functions |
-//           v
 
 function onSubmit(event) {
-
-  event.preventDefault()
+  event.preventDefault();
 
   const email = emailInput.value.trim();
 
@@ -39,60 +23,46 @@ function onSubmit(event) {
   }
 
   showErrorState();
-
 }
 
-function onDismiss(){
-  toggleViews("signup")
+function onDismiss() {
+  toggleViews("signup");
 }
 
 function showSuccessState(email) {
-
   successEmail.textContent = email;
 
-  successEmail.style.fontWeight = "600";
+  successEmail.classList.add("font-weight-bold");
 
   signupForm.reset();
 
   toggleViews("success");
 
   clearErrorState();
-
 }
 
 function clearErrorState() {
-
   emailInput.classList.remove("input-error");
-
-  errorMsg.style.display = "none";
-
+  errorMsg.classList.remove("block");
+  errorMsg.classList.add("hidden");
 }
 
 function showErrorState() {
-
   emailInput.classList.add("input-error");
-
-  errorMsg.style.display = "block";
-
+  errorMsg.classList.remove("hidden");
+  errorMsg.classList.add("block");
 }
 
-
-
 function toggleViews(toggle) {
-
-  if (toggle=="signup") {
+  if (toggle == "signup") {
     signup.style.display = "flex";
     success.style.display = "none";
-  } else {
-    signup.style.display = "none";
-    success.style.display = "flex";
+    return;
   }
-
+  signup.style.display = "none";
+  success.style.display = "flex";
 }
 
 function isValidEmail(email) {
-  return EMAIL_PATTERN.test(email);
+  return email && EMAIL_PATTERN.test(email);
 }
-
-//           ^
-// functions |

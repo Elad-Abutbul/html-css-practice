@@ -1,10 +1,16 @@
-.max-width{
-    width: 100%;
+.max-width {
+  width: 100%;
 }
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
 }
-.font-weight-600{
-    font-weight: 600;
+.font-weight-bold {
+  font-weight: 600;
+}
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
 }

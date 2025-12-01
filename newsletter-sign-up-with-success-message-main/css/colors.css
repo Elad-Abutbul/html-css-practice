@@ -4,5 +4,7 @@
   --blue-700: hsl(235, 18%, 26%);
   --grey: hsl(0, 0%, 58%);
   --white: hsl(0, 0%, 100%);
-  --black:hsl(0, 0%, 0%);
+  --black: hsl(0, 0%, 0%);
+  --box-shadow-pink: rgba(255, 83, 123, 0.35);
+  --input-background-error: #ffe6e6;
 }

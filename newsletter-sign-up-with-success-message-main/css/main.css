@@ -25,10 +25,9 @@ body {
 }
 .button:hover {
   background: linear-gradient(90deg, hsl(347, 100%, 66%), hsl(13, 100%, 61%));
-  box-shadow: 0 12px 20px rgba(255, 83, 123, 0.35);
+  box-shadow: 0 12px 20px var(--box-shadow-pink);
 }
 
-/*  */
 .signup-container {
   display: flex;
   align-items: center;
@@ -56,15 +55,15 @@ body {
 }
 .list-container {
   gap: 5px;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
 }
 .list-item {
   display: flex;
   gap: 10px;
-}
-.list-item img {
-  width: 15px;
-  height: 15px;
+  img {
+    width: 15px;
+    height: 15px;
+  }
 }
 .email-container {
   gap: 6px;
@@ -76,8 +75,8 @@ body {
   align-items: center;
 }
 .input-error {
-  border: 1px solid red;
-  background-color: #ffe6e6;
+  outline: 1px solid var(--red);
+  background-color: var(--input-background-error);
 }
 .error-msg {
   color: var(--red);
@@ -95,28 +94,23 @@ body {
   border-radius: 5px;
   width: 100%;
 }
-/*  */
 
-/*  */
 .container-success {
   width: 350px;
   height: 330px;
   background-color: var(--white);
   border-radius: 15px;
-  padding: 25px 20px 25px 20px;
+  padding: 25px 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  display: none;
 }
 .signup-image {
   width: 260px;
   padding-right: 15px;
 }
-/*  */
 
-#success {
-  display: none;
-}
 .success-content {
   width: 300px;
   justify-content: space-between;
@@ -194,7 +188,6 @@ body {
   .button-submit {
     padding: 20px;
   }
-   /* --- SUCCESS MOBILE --- */
 
   .container-success {
     width: 100vw;
@@ -230,7 +223,3 @@ body {
     font-size: 14px;
   }
 }
-
-/*  */
-
-/*  */
